@@ -1,0 +1,285 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html, 
+body {
+    margin: 0;
+    padding: 0;
+    color: #151515;
+    font-family: "Source Sans 3", sans-serif;
+}
+
+a {
+    color: #151515;
+    text-decoration: none;
+}
+
+a:visited{
+    color: #151515;
+}
+
+img{
+    width: 100%;
+    display: block;
+    border-radius: 3px;
+}
+
+
+/* typography and img*/
+
+h1{
+    font-size: 2rem;
+    line-height: 34.62px;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.5em;
+}
+
+h2{
+    font-size: 1.5rem;
+    line-height: 25.97px;
+    margin: 0 0 0.625em;
+}
+
+nav li{
+    font-size: 0.75rem;
+    font-weight: 600;
+    line-height: 15px;
+    color: #090909;
+}
+
+.logo p{
+    font-size: 0.875rem;
+    color: #0E0E0E;
+    line-height: 14.66px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+}
+
+p{
+    margin: 0;
+    line-height: 1.25rem;
+}
+
+.logo img{
+    width: 23.6px;
+}
+
+
+
+/* layout */
+
+header,
+main,
+footer{
+    width: 100vw;
+}
+
+header{
+    display: flex;
+    padding: 1.125em 1.25em;
+    justify-content: space-between;
+}
+
+/* navigation */
+
+nav,
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+.logo{
+    gap: 0.2em;
+}
+
+nav ul{
+    display: flex;
+    gap: 1.25em;
+}
+
+nav li{
+    list-style-type: none;
+}
+
+
+/* hero post */
+
+.hero-post{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/article-hero.png);
+    background-size: cover;
+    background-position: right bottom;
+    color: #FFFFFF;
+    transform: scaleX(-1);  /* flip bg-img horizontaly */
+    padding-bottom: 1.5em;
+}
+
+.hero-post-content{
+    transform: scaleX(-1);  /* flip content of hero-post back to normal flow */
+}
+
+
+/* article listing */
+
+.article-listing{
+    padding-top: 2em;
+    display: grid;
+    grid-auto-rows: minmax(300px, 375px);
+    gap: 1.25em;
+}
+
+.article-listing img{
+    height: 60%;
+    object-fit: cover;
+}
+
+.date{
+    margin-bottom: 0.625em;
+    margin-top: 0.625em;
+    font-size: 0.75rem;
+}
+
+
+/* about me */
+
+.about-me img{
+    width: 182px;
+    margin: 1.5em 0;
+}
+
+.post p{
+    margin-bottom: 1em;
+}
+
+.post-img{
+    margin: 2em 0;
+    max-height: 200px;
+    object-fit: cover;
+    object-position: bottom;
+}
+
+/* footer */
+
+footer{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 2.375em;
+    color: #ECECEC;
+    background: #202020;
+    margin-top: 2.5em;
+}
+
+.copyright{
+    color: #D7D7D7;
+}
+
+/* buttons  */
+
+.view-more{
+    width: 100%;
+    background: #FFFFFF;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: 700;
+    text-decoration: underline;
+    margin: 2.5em 0 0 0;
+}
+
+/* utilities */
+
+.uppercase{
+    text-transform: uppercase;
+}
+
+.padding-x{
+    padding-left: 1.25em;
+    padding-right: 1.25em;
+}
+
+.padding-block-lg{
+    padding: 2em;
+}
+
+.padding-block-md{
+    padding: 1.5em;
+}
+
+.strong{
+    font-weight: 700;
+}
+
+.center{
+    text-align: center;
+}
+
+
+/*     media queries */
+
+@media (min-width: 870px){
+
+    /* typography */
+
+    h1{
+        font-size: 2.25rem;
+    }
+
+    .hero-post h1{
+        font-size: 2.5rem;
+    }
+
+    /* hero post */
+    .hero-post{
+        min-height: 40vh;
+        background-position: center 70%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        padding-bottom: 4rem;
+    }
+
+
+
+    .hero-post-content{
+        max-width: 600px;
+    }
+
+    /* article listing  */
+
+    .article-listing{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.75em 1.25em;
+    }
+
+
+       /* post */ 
+
+    .post img{
+        min-height: 500px;
+    }
+
+    .post p,
+    .post h1 {
+        width: 90%;
+        margin: 1em auto;
+    }
+
+    .post .date{
+        margin-top: 3rem;
+    }
+
+    /* about me */
+
+    .about-me{
+        display: flex;
+        align-items: center;
+        gap: 2em;
+    }
+
+    .about-me div{
+        width: 70%;
+    }
+}
